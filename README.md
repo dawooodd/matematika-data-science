@@ -5,7 +5,7 @@
 [![Documentation](https://img.shields.io/badge/docs-penjelasan__awam-orange.svg)](docs/penjelasan_matematika_awam.md)
 [![Status](https://img.shields.io/badge/status-production--ready-brightgreen.svg)]()
 
-Selamat datang di repositori proyek **Matematika untuk Data Science**! 
+Selamat datang di repositori proyek **Matematika Data Science**! 
 
 Repositori ini mendemonstrasikan bagaimana konsep-konsep matematika tingkat lanjut, teori probabilitas, dan statistika inferensial diterjemahkan menjadi **solusi bisnis nyata berbasis data (*data-driven decision making*)**. 
 
