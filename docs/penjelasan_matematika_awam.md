@@ -138,7 +138,7 @@ Komputer dan algoritma *Machine Learning* membutuhkan cara untuk memahami bagaim
 * **Definisi Sederhana:** Kebalikan dari CDF. Anda menentukan persentase targetnya terlebih dahulu, lalu rumus memberitahu berapa nilai angka fisiknya.
 * **Analogi Awam:** Jika CDF bertanya: *"Berapa persen orang yang tingginya di bawah 175 cm?"*, maka Inverse CDF bertanya: *"Jika saya ingin berada di 10% orang tertinggi di ruangan ini, berapa batas minimal tinggi badan yang harus saya miliki?"*
 * **Penerapan Nyata di Kode:** 
-  Pada `notebooks/01_distribusi_dan_naive_bayes.ipynb`, kita menggunakan teknik canggih bernama **Inverse Transform Sampling**. Kita menghasilkan angka acak seragam antara 0 dan 1, lalu melemparkannya ke rumus `inverse_cdf` untuk menciptakan ribuan data burung tiruan (*synthetic data*) yang perilakunya identik dengan alam liar!
+  Pada `notebooks/soal-1-distribusi-dan-algoritma-naive-bayes.ipynb`, kita menggunakan teknik canggih bernama **Inverse Transform Sampling**. Kita menghasilkan angka acak seragam antara 0 dan 1, lalu melemparkannya ke rumus `inverse_cdf` untuk menciptakan ribuan data burung tiruan (*synthetic data*) yang perilakunya identik dengan alam liar!
 
 ---
 

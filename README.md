@@ -18,24 +18,26 @@ Seluruh algoritma dan pengujian statistik dalam proyek ini dirancang murni dari 
 Repositori telah distrukturkan secara profesional dan modular agar mudah dinavigasi oleh pengembang, peneliti, maupun pemangku kepentingan bisnis:
 
 ```plaintext
-matematika-untuk-data-science/
+matematika-data-science/
 │
 ├── data/
-│   └── .gitkeep                               # Folder untuk penyimpanan dataset sintetik
+│   ├── .gitkeep                               # Folder penyimpanan dataset sintetik
+│   └── kriteria-2-knowledge-check-submissions.xlsx # Lembar evaluasi kriteria & jawaban submission
 │
 ├── notebooks/                                 # Jupyter Notebooks interaktif untuk eksplorasi
-│   ├── 01_distribusi_dan_naive_bayes.ipynb
-│   ├── 02_ab_testing_sistem_rekomendasi_ttest.ipynb
-│   └── 03_ab_testing_conversion_rate_ztest.ipynb
+│   ├── soal-1-distribusi-dan-algoritma-naive-bayes.ipynb
+│   ├── soal-2-sistem-rekomendasi-ab.ipynb
+│   └── soal-3-software-dev-ab.ipynb
 │
 ├── scripts/                                   # Skrip Python modular siap pakai (standalone)
-│   ├── naive_bayes_from_scratch.py
-│   ├── ab_testing_recommendation.py
-│   └── ab_testing_conversion.py
+│   ├── soal-1-distribusi-dan-algoritma-naive-bayes.py
+│   ├── soal-2-sistem-rekomendasi-ab.py
+│   └── soal-3-software-dev-ab.py
 │
 ├── docs/                                      # Dokumentasi konseptual mendalam
 │   └── penjelasan_matematika_awam.md          # Panduan matematika & statistik ramah orang awam
 │
+├── uniform-viz.png                            # Visualisasi grafik distribusi probabilitas
 ├── .gitignore                                 # Mengabaikan cache & file sementara
 ├── requirements.txt                           # Daftar pustaka Python pendukung
 └── README.md                                  # Dokumentasi utama proyek
@@ -56,8 +58,8 @@ matematika-untuk-data-science/
 ## 🔬 Bedah Studi Kasus Mendalam
 
 ### 1. Klasifikasi Ras Burung Menggunakan Teori Distribusi & Naive Bayes *From Scratch*
-📂 **Notebook:** [`notebooks/01_distribusi_dan_naive_bayes.ipynb`](notebooks/01_distribusi_dan_naive_bayes.ipynb)  
-🐍 **Skrip Python:** [`scripts/naive_bayes_from_scratch.py`](scripts/naive_bayes_from_scratch.py)
+📂 **Notebook:** [`notebooks/soal-1-distribusi-dan-algoritma-naive-bayes.ipynb`](notebooks/soal-1-distribusi-dan-algoritma-naive-bayes.ipynb)  
+🐍 **Skrip Python:** [`scripts/soal-1-distribusi-dan-algoritma-naive-bayes.py`](scripts/soal-1-distribusi-dan-algoritma-naive-bayes.py)
 
 #### 🎯 Masalah Bisnis
 Bagaimana cara sistem mengklasifikasikan spesies atau kategori objek alamiah secara akurat ketika data lapangan terbatas, tanpa harus menggunakan model *deep learning* yang boros daya komputasi dan sulit dijelaskan alasannya (*black-box*)?
@@ -80,6 +82,12 @@ Bagaimana cara sistem mengklasifikasikan spesies atau kategori objek alamiah sec
      $$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$$
    * **Distribusi Uniform ($a, b$):** Dimodelkan untuk rasio paruh terhadap kepala (`beak_head_ratio`) yang memiliki peluang merata pada rentang tertentu.
      $$f(x) = \frac{1}{b - a}$$
+
+   <p align="center">
+     <img src="uniform-viz.png" alt="Visualisasi Distribusi Uniform" width="550"/>
+     <br>
+     <em>Visualisasi Distribusi Uniform Teoritis (Batas Bawah = 0, Batas Atas = 10)</em>
+   </p>
 2. **Klasifikasi Naive Bayes:**
    Menghitung peluang *Posterior* untuk setiap kelas ras burung $C_k$ berdasarkan data fitur $X = (x_1, x_2, \dots, x_d)$:
    $$P(C_k \mid X) \propto P(C_k) \prod_{j=1}^{d} P(x_j \mid C_k)$$
@@ -93,8 +101,8 @@ Bagaimana cara sistem mengklasifikasikan spesies atau kategori objek alamiah sec
 ---
 
 ### 2. Evaluasi Fitur "Sistem Rekomendasi Artikel" (A/B Testing - Welch's T-Test)
-📂 **Notebook:** [`notebooks/02_ab_testing_sistem_rekomendasi_ttest.ipynb`](notebooks/02_ab_testing_sistem_rekomendasi_ttest.ipynb)  
-🐍 **Skrip Python:** [`scripts/ab_testing_recommendation.py`](scripts/ab_testing_recommendation.py)
+📂 **Notebook:** [`notebooks/soal-2-sistem-rekomendasi-ab.ipynb`](notebooks/soal-2-sistem-rekomendasi-ab.ipynb)  
+🐍 **Skrip Python:** [`scripts/soal-2-sistem-rekomendasi-ab.py`](scripts/soal-2-sistem-rekomendasi-ab.py)
 
 #### 🎯 Masalah Bisnis
 Sebuah media blog teknologi meluncurkan fitur *widget* "Artikel Terkait" di bagian bawah halaman. Manajemen ingin memastikan: **apakah penambahan fitur ini secara nyata mendorong pembaca untuk mengonsumsi lebih banyak konten, ataukah peningkatan yang terlihat hanya kebetulan musiman belaka?**
@@ -128,8 +136,8 @@ Sebuah media blog teknologi meluncurkan fitur *widget* "Artikel Terkait" di bagi
 ---
 
 ### 3. Peningkatan Retensi Aplikasi Edukasi (A/B Testing - Two-Proportion Z-Test)
-📂 **Notebook:** [`notebooks/03_ab_testing_conversion_rate_ztest.ipynb`](notebooks/03_ab_testing_conversion_rate_ztest.ipynb)  
-🐍 **Skrip Python:** [`scripts/ab_testing_conversion.py`](scripts/ab_testing_conversion.py)
+📂 **Notebook:** [`notebooks/soal-3-software-dev-ab.ipynb`](notebooks/soal-3-software-dev-ab.ipynb)  
+🐍 **Skrip Python:** [`scripts/soal-3-software-dev-ab.py`](scripts/soal-3-software-dev-ab.py)
 
 #### 🎯 Masalah Bisnis
 Perusahaan edutech merombak desain antarmuka (UI) aplikasi belajar mereka dengan harapan meningkatkan retensi pengguna dari baseline **69%** menjadi minimal **72%** (efek minimum terdeteksi / MDE = $+3\%$). Manajemen membutuhkan jawaban atas dua pertanyaan krusial:
@@ -217,13 +225,13 @@ Anda dapat menjalankan studi kasus melalui dua cara:
 * **Opsi B: Melalui Terminal (Skrip Python Standalone)**
   ```bash
   # Menjalankan simulasi Naive Bayes from scratch
-  python scripts/naive_bayes_from_scratch.py
+  python scripts/soal-1-distribusi-dan-algoritma-naive-bayes.py
 
   # Menjalankan simulasi A/B testing t-test
-  python scripts/ab_testing_recommendation.py
+  python scripts/soal-2-sistem-rekomendasi-ab.py
 
   # Menjalankan simulasi A/B testing z-test
-  python scripts/ab_testing_conversion.py
+  python scripts/soal-3-software-dev-ab.py
   ```
 
 ---
